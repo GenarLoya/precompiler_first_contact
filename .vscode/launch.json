@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'precompiler_first_contact'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=precompiler_first_contact",
+                    "--package=precompiler_first_contact"
+                ],
+                "filter": {
+                    "name": "precompiler_first_contact",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'precompiler_first_contact'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=precompiler_first_contact",
+                    "--package=precompiler_first_contact"
+                ],
+                "filter": {
+                    "name": "precompiler_first_contact",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
